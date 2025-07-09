@@ -46,15 +46,14 @@ body {
 }
 
 .card {
-  border: 2px solid white;
   padding: 1rem;
   border-radius: 1rem;
   overflow: hidden;
+  background: var(--Navy-900);
 }
 
 .card.profile {
   padding: 0;
-  background: var(--Navy-900);
   border: none;
 }
 
