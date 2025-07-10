@@ -228,7 +228,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .container {
-    min-width: 1200px;
+    min-width: 1000px;
     gap: 4rem 1.5rem;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -250,6 +250,7 @@ body {
 
   .profile-text__name {
     font-size: 2rem;
+    line-height: 2.4rem;
   }
 
   .profile-timeframe {
@@ -280,11 +281,11 @@ body {
     top: -45px;
     /* for bg image */
     background-repeat: no-repeat;
-    background-position: 190px -10px;
+    background-position: 150px -10px;
     background-size: 70px;
   }
 
   .excercise::before {
-    background-position: 180px 5px !important ;
+    background-position: 150px 5px !important ;
   }
 }
