@@ -32,6 +32,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 0;
+  position: relative;
 }
 
 .container {
@@ -41,20 +43,42 @@ body {
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.6rem;
+  gap: 4rem;
 }
 
 .card {
-  padding: 1rem;
-  border-radius: 1rem;
-  overflow: hidden;
+  width: 100%;
   background: var(--Navy-900);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 2rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border-radius: 0.875rem;
+  position: relative;
+  display: flex;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: inherit;
+  z-index: -1;
+
+  /* for bg image */
+  background-repeat: no-repeat;
+  background-position: 260px -10px;
+  background-size: 80px;
 }
 
 /* profile card start */
 .card.profile {
   padding: 0;
   border: none;
+  flex-direction: column;
 }
 
 .profile-info {
@@ -67,8 +91,8 @@ body {
 }
 
 .profile-picture {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 4px solid rgba(255, 255, 255, 0.737);
 }
@@ -76,7 +100,6 @@ body {
 .profile-text {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
 }
 
 .profile-text__greeting {
@@ -113,20 +136,11 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
-/* work card start */
-.work {
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-}
-
 .card-left,
 .card-right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .card-right {
@@ -136,7 +150,7 @@ body {
 }
 
 .card-left__title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
@@ -150,5 +164,36 @@ body {
 }
 
 .card-right__previous-hours {
-  color: #ffffff80;
+  color: #ffffff97;
+  font-size: 0.875rem;
+}
+
+/* all the ::before elements to to show background images and colors */
+.work::before {
+  background-color: var(--orange-300);
+  background-image: url("./images/icon-work.svg");
+}
+
+.play::before {
+  background-color: var(--blue-300);
+  background-image: url("./images/icon-play.svg");
+}
+
+.study::before {
+  background-color: var(--pink-400);
+  background-image: url("./images/icon-study.svg");
+}
+
+.excercise::before {
+  background-color: var(--green-400);
+  background-image: url("./images/icon-exercise.svg");
+}
+.social::before {
+  background-color: var(--purple-700);
+  background-image: url("./images/icon-social.svg");
+}
+
+.self-care::before {
+  background-color: var(--yellow-300);
+  background-image: url("./images/icon-self-care.svg");
 }
