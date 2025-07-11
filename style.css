@@ -164,7 +164,7 @@ body {
   background-image: url("./images/icon-study.svg");
 }
 
-.excercise::before {
+.exercise::before {
   background-color: var(--green-400);
   background-image: url("./images/icon-exercise.svg");
   background-position: 260px 5px !important ;
@@ -285,7 +285,7 @@ body {
     background-size: 70px;
   }
 
-  .excercise::before {
+  .exercise::before {
     background-position: 150px 5px !important ;
   }
 }
